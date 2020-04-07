@@ -28,64 +28,68 @@ self.__precacheManifest = [
     "url": "/cdr-streamer-front/robots.txt"
   },
   {
-    "revision": "1da532f543b6a697bc58bf5514ffdb9c",
+    "revision": "7a48145c7332f4ad758ab3822b5e524e",
     "url": "/cdr-streamer-front/index.html"
-  },
-  {
-    "revision": "50acadf632bc9506653499fff9bb30ac",
-    "url": "/cdr-streamer-front/img/ttsicons/settings.svg"
-  },
-  {
-    "revision": "7db92e62bee29459989694fb4526bc16",
-    "url": "/cdr-streamer-front/img/ttsicons/play.svg"
-  },
-  {
-    "revision": "8181039b61cfc565659fa059c039e706",
-    "url": "/cdr-streamer-front/img/ttsicons/plus.svg"
   },
   {
     "revision": "ce554f9aa15080bcf5d30af0549b0779",
     "url": "/cdr-streamer-front/img/ttsicons/refresh.svg"
   },
   {
+    "revision": "50acadf632bc9506653499fff9bb30ac",
+    "url": "/cdr-streamer-front/img/ttsicons/settings.svg"
+  },
+  {
+    "revision": "8181039b61cfc565659fa059c039e706",
+    "url": "/cdr-streamer-front/img/ttsicons/plus.svg"
+  },
+  {
+    "revision": "7db92e62bee29459989694fb4526bc16",
+    "url": "/cdr-streamer-front/img/ttsicons/play.svg"
+  },
+  {
     "revision": "14b4111eac1e3e8aeaaee5e2d9685dc6",
     "url": "/cdr-streamer-front/img/ttsicons/pause.svg"
-  },
-  {
-    "revision": "e3eca74d0d77d7299725c27949c59ebd",
-    "url": "/cdr-streamer-front/img/loaders/rings.svg"
-  },
-  {
-    "revision": "f7caff4f185c623ba45c02ab832f9c1f",
-    "url": "/cdr-streamer-front/img/ttsicons/bookmark.svg"
   },
   {
     "revision": "d8f8be8601d46e34d280ea4e44a5be1d",
     "url": "/cdr-streamer-front/img/loaders/puff.svg"
   },
   {
-    "revision": "922a2318b1a1362990d3",
-    "url": "/cdr-streamer-front/js/app.75e37791.js"
+    "revision": "f7caff4f185c623ba45c02ab832f9c1f",
+    "url": "/cdr-streamer-front/img/ttsicons/bookmark.svg"
+  },
+  {
+    "revision": "e3eca74d0d77d7299725c27949c59ebd",
+    "url": "/cdr-streamer-front/img/loaders/rings.svg"
+  },
+  {
+    "revision": "84c4b1c5c9c304d4b0d6",
+    "url": "/cdr-streamer-front/js/app.e84ce5fe.js"
   },
   {
     "revision": "20ca233e48ad5b5a127f6f1d86a4e4ef",
     "url": "/cdr-streamer-front/img/ttsicons/minus.svg"
   },
   {
-    "revision": "6ee7698493609851c684cc8b560084a7",
-    "url": "/cdr-streamer-front/img/ttsicons/play-full.svg"
-  },
-  {
     "revision": "3a1311d5e71f7d0d9cf75005f1992426",
     "url": "/cdr-streamer-front/img/ttsicons/next.svg"
+  },
+  {
+    "revision": "6ee7698493609851c684cc8b560084a7",
+    "url": "/cdr-streamer-front/img/ttsicons/play-full.svg"
   },
   {
     "revision": "01711fa464361d1f2c5994e387288432",
     "url": "/cdr-streamer-front/img/icon/notsee.png"
   },
   {
-    "revision": "7e7fd524bff2b430af8a924bae7b6fad",
-    "url": "/cdr-streamer-front/img/icon/list.png"
+    "revision": "da8857c4b5ff5228eda7b8bad5514750",
+    "url": "/cdr-streamer-front/img/icon/downloadqueue.png"
+  },
+  {
+    "revision": "17850a078b8aa98f1b4360f5dac35c37",
+    "url": "/cdr-streamer-front/img/icon/list-white.png"
   },
   {
     "revision": "39153b06929a746eee884dd665ab0dc8",
@@ -96,12 +100,8 @@ self.__precacheManifest = [
     "url": "/cdr-streamer-front/img/icon/see.png"
   },
   {
-    "revision": "17850a078b8aa98f1b4360f5dac35c37",
-    "url": "/cdr-streamer-front/img/icon/list-white.png"
-  },
-  {
-    "revision": "da8857c4b5ff5228eda7b8bad5514750",
-    "url": "/cdr-streamer-front/img/icon/downloadqueue.png"
+    "revision": "7e7fd524bff2b430af8a924bae7b6fad",
+    "url": "/cdr-streamer-front/img/icon/list.png"
   },
   {
     "revision": "8f3082d40ef4c4f2e90c48c4f944d8af",
@@ -120,7 +120,7 @@ self.__precacheManifest = [
     "url": "/cdr-streamer-front/css/chunk-vendors.6acb9ff2.css"
   },
   {
-    "revision": "922a2318b1a1362990d3",
+    "revision": "84c4b1c5c9c304d4b0d6",
     "url": "/cdr-streamer-front/css/app.6ad5bf1c.css"
   },
   {

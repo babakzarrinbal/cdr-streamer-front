@@ -6,11 +6,42 @@
     </transition>
     <div class="body" style="position:relative">
       <ul class="list-group">
-        <li class="list-group-item list-group-item-primary btn btn-primary text-left" @click="update()">Update All configs  <strong class="float-right"> {{allConfigsLastUpdated}}</strong></li>
-        <li class="list-group-item list-group-item-success btn btn-success text-left" style="width:370px" @click="update('cdrCallTypes')">Update cdrCallTypes <strong class="float-right"> {{cdrCallTypesLastUpdated}}</strong></li>
-        <li class="list-group-item list-group-item-success btn btn-success text-left" @click="update('cdrDestinationInfo')">Update cdrDestinationInfo <strong class="float-right">{{cdrDestinationInfoLastUpdated}}</strong></li>
-        <li class="list-group-item list-group-item-success btn btn-success text-left" @click="update('sdpProductDetails')">Update sdpProductDetails <strong class="float-right">{{sdpProductDetailsLastUpdated}}</strong></li>
-        <li class="list-group-item list-group-item-success btn btn-success text-left" @click="update('streamerConfigurations')">Update streamerConfigurations <strong class="float-right">{{streamerConfigurationsLastUpdated}}</strong></li>
+        <li
+          class="list-group-item list-group-item-primary btn btn-primary text-left"
+          @click="update()"
+        >
+          Update All configs
+          <strong class="float-right">{{allConfigsLastUpdated}}</strong>
+        </li>
+        <li
+          class="list-group-item list-group-item-success btn btn-success text-left"
+          style="width:370px"
+          @click="update('cdrCallTypes')"
+        >
+          Update cdrCallTypes
+          <strong class="float-right">{{cdrCallTypesLastUpdated}}</strong>
+        </li>
+        <li
+          class="list-group-item list-group-item-success btn btn-success text-left"
+          @click="update('cdrDestinationInfo')"
+        >
+          Update cdrDestinationInfo
+          <strong class="float-right">{{cdrDestinationInfoLastUpdated}}</strong>
+        </li>
+        <li
+          class="list-group-item list-group-item-success btn btn-success text-left"
+          @click="update('sdpProductDetails')"
+        >
+          Update sdpProductDetails
+          <strong class="float-right">{{sdpProductDetailsLastUpdated}}</strong>
+        </li>
+        <li
+          class="list-group-item list-group-item-success btn btn-success text-left"
+          @click="update('streamerConfigurations')"
+        >
+          Update streamerConfigurations
+          <strong class="float-right">{{streamerConfigurationsLastUpdated}}</strong>
+        </li>
       </ul>
     </div>
   </div>
@@ -22,11 +53,11 @@ export default {
   data() {
     return {
       expandSettings: false,
-      allConfigsLastUpdated:"",
-      cdrCallTypesLastUpdated:"",
-      cdrDestinationInfoLastUpdated:"",
-      sdpProductDetailsLastUpdated:"",
-      streamerConfigurationsLastUpdated:"",
+      allConfigsLastUpdated: "",
+      cdrCallTypesLastUpdated: "",
+      cdrDestinationInfoLastUpdated: "",
+      sdpProductDetailsLastUpdated: "",
+      streamerConfigurationsLastUpdated: ""
     };
   },
   components: {
@@ -35,20 +66,24 @@ export default {
   },
   async created() {},
   methods: {
-    update(conf){
-    console.log();
-    let c = conf? (conf+"LastUpdated"):"allConfigsLastUpdated"
-      fetch("http://t1vl604:8180/configreset?configs="+conf).then(r=>r.text()).then(()=>{
-        let t = " ("+(new Date()).format("mm/dd hh:MM TT")+")"
-        if(!conf){
-          ["cdrCallTypesLastUpdated",
-      "cdrDestinationInfoLastUpdated",
-      "sdpProductDetailsLastUpdated",
-      "streamerConfigurationsLastUpdated"].forEach(k=>(this[k] = t))
-        }
+    update(conf) {
+      let url = "http://t1vl604:8180/configreset?configs=" + conf
+      let c = conf ? conf + "LastUpdated" : "allConfigsLastUpdated";
+      fetch(url,{cache: "no-store"})
+        .then(r => r.text())
+        .then(() => {
+          let t = " (" + new Date().format("mm/dd hh:MM TT") + ")";
+          if (!conf) {
+            [
+              "cdrCallTypesLastUpdated",
+              "cdrDestinationInfoLastUpdated",
+              "sdpProductDetailsLastUpdated",
+              "streamerConfigurationsLastUpdated"
+            ].forEach(k => (this[k] = t));
+          }
           this[c] = t;
-        
-      }).catch((e)=>(console.log(this[c]),this[c] = " (Error!!!)"))
+        })
+        .catch((e) => (console.log(e,this[c]), (this[c] = " (Error!!!)")));
     }
   },
   watch: {},

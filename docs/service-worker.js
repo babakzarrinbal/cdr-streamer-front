@@ -1,4 +1,4 @@
-importScripts("/cdr-streamer-front/precache-manifest.46ff49beaf59f8d7c39e472f5af0a3b8.js", "/cdr-streamer-front/workbox-v3.6.3/workbox-sw.js");
+importScripts("/cdr-streamer-front/precache-manifest.fa12a9370083c7d471586b2d6c368f12.js", "/cdr-streamer-front/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/cdr-streamer-front/workbox-v3.6.3"});
 // workbox.core.skipWaiting();
 // workbox.core.clientsClaim();
